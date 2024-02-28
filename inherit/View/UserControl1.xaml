@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:s="clr-namespace:inherit.Service"
              xmlns:local="clr-namespace:inherit.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
@@ -21,7 +22,7 @@
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
-                <ListView ItemsSource="{Binding List}">
+                <ListView ItemsSource="{Binding Manage.List}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding }"></TextBlock>
@@ -32,7 +33,7 @@
             <Grid Grid.Column="1">
                 <StackPanel >
                     <Button Content="Click" Command="{Binding ButtonCmd}"></Button>
-                    <TextBlock Text="{Binding InheritText }" FontSize="48"></TextBlock>
+                    <TextBlock Text="{Binding Manage.InheritText }" FontSize="48"></TextBlock>
                 </StackPanel>
             </Grid>
         </Grid>

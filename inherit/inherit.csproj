@@ -72,6 +72,7 @@
     </ApplicationDefinition>
     <Compile Include="Model\ContentViewModels.cs" />
     <Compile Include="Service\IViewModel.cs" />
+    <Compile Include="Service\Manage.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\User1ViewModel.cs" />
     <Compile Include="ViewModel\User2ViewModel.cs" />

@@ -15,6 +15,7 @@
 using CommonServiceLocator;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
+using inherit.Service;
 
 namespace inherit.ViewModel
 {
@@ -27,6 +28,7 @@ namespace inherit.ViewModel
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<User1ViewModel>();
             SimpleIoc.Default.Register<User2ViewModel>();
+            SimpleIoc.Default.Register<Manage>();
         }
 
         public MainViewModel Main

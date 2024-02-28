@@ -21,7 +21,7 @@
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
-                <ListView ItemsSource="{Binding List}">
+                <ListView ItemsSource="{Binding Manage.List}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding }"></TextBlock>
@@ -30,7 +30,7 @@
                 </ListView>
             </Grid>
             <Grid Grid.Column="1">
-                <TextBlock Text="{Binding InheritText}" FontSize="48"></TextBlock>
+                <TextBlock Text="{Binding Manage.InheritText}" FontSize="48"></TextBlock>
             </Grid>
         </Grid>
     </Grid>

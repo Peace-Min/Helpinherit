@@ -13,17 +13,7 @@ namespace inherit.ViewModel
         
         public User2ViewModel() 
         {
-            Task.Run(() =>
-            {
-                while(true)
-                {
-                    Application.Current.Dispatcher.Invoke(() =>
-                    {
-                        var a = InheritText;
-                        Task.Delay(5000);
-                    });
-                }
-            });
+            
         }
     }
 }
