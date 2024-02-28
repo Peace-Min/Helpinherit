@@ -1,0 +1,33 @@
+﻿<Window x:Class="inherit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm ="clr-namespace:inherit.ViewModel"
+        xmlns:view="clr-namespace:inherit.View"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:inherit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vm:User1ViewModel}">
+            <view:UserControl1/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:User2ViewModel}">
+            <view:UserControl2/>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <TabControl ItemsSource="{Binding ContentViewModels}"  TabStripPlacement="Left">
+            <TabControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}" />
+                </DataTemplate>
+            </TabControl.ItemTemplate>
+            <TabControl.ContentTemplate>
+                <DataTemplate>
+                    <ContentControl Content="{Binding ViewModel}" />
+                </DataTemplate>
+            </TabControl.ContentTemplate>
+        </TabControl>
+    </Grid>
+</Window>
